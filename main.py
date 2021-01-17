@@ -1,10 +1,13 @@
 from tkinter import *
 
 root = Tk()
-root.title('Simple Calculator')
+root.title('Python Calculator')
 
 e = Entry(root, width=35, borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
+
+f_num = 0
+math = ''
 
 
 def button_click(number):
@@ -22,72 +25,64 @@ def button_equal():
     e.delete(0, END)
 
     if math == "Addition":
-        e.insert(0, f_num + int(second_number))
-    if math == "Subtract":
-        e.insert(0, f_num - int(second_number))
-    if math == "Multiply":
-        e.insert(0, f_num * int(second_number))
-    if math == "Divide":
-        e.insert(0, f_num / int(second_number))
+        e.insert(0, f_num + float(second_number))
+    elif math == "Subtract":
+        e.insert(0, f_num - float(second_number))
+    elif math == "Multiply":
+        e.insert(0, f_num * float(second_number))
+    elif math == "Divide":
+        e.insert(0, f_num / float(second_number))
+
+
+def set_calc(value):
+    first_number = e.get()
+    global math, f_num
+    math = value
+    f_num = float(first_number)
+    e.delete(0, END)
 
 
 def button_add():
-    first_number = e.get()
-    global f_num
-    global math
-    math = "Addition"
-    f_num = int(first_number)
-    e.delete(0, END)
+    set_calc("Addition")
 
 
 def button_divide():
-    first_number = e.get()
-    global f_num
-    global math
-    math = "Divide"
-    f_num = int(first_number)
-    e.delete(0, END)
+    set_calc("Divide")
 
 
 def button_multiply():
-    first_number = e.get()
-    global f_num
-    global math
-    math = "Multiply"
-    f_num = int(first_number)
-    e.delete(0, END)
+    set_calc("Multiply")
 
 
 def button_subtract():
-    first_number = e.get()
-    global f_num
-    global math
-    math = "Subtract"
-    f_num = int(first_number)
-    e.delete(0, END)
+    set_calc("Subtract")
 
 
 # Number Buttons
 
-button_1 = Button(root, text="1", padx=40, pady=20, command=lambda: button_click(1))
-button_2 = Button(root, text="2", padx=40, pady=20, command=lambda: button_click(2))
-button_3 = Button(root, text="3", padx=40, pady=20, command=lambda: button_click(3))
-button_4 = Button(root, text="4", padx=40, pady=20, command=lambda: button_click(4))
-button_5 = Button(root, text="5", padx=40, pady=20, command=lambda: button_click(5))
-button_6 = Button(root, text="6", padx=40, pady=20, command=lambda: button_click(6))
-button_7 = Button(root, text="7", padx=40, pady=20, command=lambda: button_click(7))
-button_8 = Button(root, text="8", padx=40, pady=20, command=lambda: button_click(8))
-button_9 = Button(root, text="9", padx=40, pady=20, command=lambda: button_click(9))
-button_0 = Button(root, text="0", padx=40, pady=20, command=lambda: button_click(0))
+def buttons_builder(text, x, y, cmd):
+    return Button(root, text=text, padx=x, pady=y, command=cmd)
+
+
+button_1 = buttons_builder("1", 40, 20, lambda: button_click(1))
+button_2 = buttons_builder("2", 40, 20, lambda: button_click(2))
+button_3 = buttons_builder("3", 40, 20, lambda: button_click(3))
+button_4 = buttons_builder("4", 40, 20, lambda: button_click(4))
+button_5 = buttons_builder("5", 40, 20, lambda: button_click(5))
+button_6 = buttons_builder("6", 40, 20, lambda: button_click(6))
+button_7 = buttons_builder("7", 40, 20, lambda: button_click(7))
+button_8 = buttons_builder("8", 40, 20, lambda: button_click(8))
+button_9 = buttons_builder("9", 40, 20, lambda: button_click(9))
+button_0 = buttons_builder("0", 40, 20, lambda: button_click(0))
 
 # Signs Buttons
+button_add = buttons_builder("+", 40, 20, button_add)
+button_equal = buttons_builder("=", 91, 20, button_equal)
+button_clear = buttons_builder("Clear", 79, 20, button_clear)
+button_subtract = buttons_builder("-", 41, 20, button_subtract)
+button_multiply = buttons_builder("*", 40, 20, button_multiply)
+button_divide = buttons_builder("/", 41, 20, button_divide)
 
-button_add = Button(root, text="+", padx=40, pady=20, command=button_add)
-button_equal = Button(root, text="=", padx=91, pady=20, command=button_equal)
-button_clear = Button(root, text="Clear", padx=79, pady=20, command=button_clear)
-button_subtract = Button(root, text="-", padx=41, pady=20, command=button_subtract)
-button_multiply = Button(root, text="*", padx=40, pady=20, command=button_multiply)
-button_divide = Button(root, text="/", padx=41, pady=20, command=button_divide)
 
 # Put The buttons on the screen
 
