@@ -58,11 +58,12 @@ def button_subtract():
     set_calc("Subtract")
 
 
-# Number Buttons
 
+ 
 def buttons_builder(text, x, y, cmd):
     return Button(root, text=text, padx=x, pady=y, command=cmd)
 
+# Number Buttons
 
 button_1 = buttons_builder("1", 40, 20, lambda: button_click(1))
 button_2 = buttons_builder("2", 40, 20, lambda: button_click(2))
