@@ -30,7 +30,7 @@ pip install tkinker
 
 ## Licencia 📄
 
-Este proyecto está bajo MIT License - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo MIT License - mira el archivo [LICENSE.md](https://github.com/EliazBobadilla/Basic-calculator-with-graphical-interface/blob/main/LICENSE) para detalles
 
 # ![Tkinker Calculadora](https://i.imgur.com/0fuyZjZ.png)
 
