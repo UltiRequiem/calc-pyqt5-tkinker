@@ -34,7 +34,7 @@ pip install pyqt5
 
 ## License 📄
 
-This proyect is under MIT License - see [LICENSE.md](https://github.com/EliazBobadilla/Basic-calculator-with-graphical-interface/blob/main/LICENSE) fore more information.
+This proyect is under MIT License - see [LICENSE](https://github.com/EliazBobadilla/Basic-calculator-with-graphical-interface/blob/main/LICENSE) fore more information.
 
 ### Tkinker Interface:
 ![Tkinker Calc Interface](https://i.imgur.com/0fuyZjZ.png)
