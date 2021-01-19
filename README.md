@@ -19,6 +19,10 @@ _You need to have a 3.X version of Python_
 ```bash
 pip install tkinker
 ```
+- Install from your terminal with pip PyQt5:
+```bash
+pip install pyqt5
+```
 - Start editing the main.py
 
 ## Build it with 🛠️
