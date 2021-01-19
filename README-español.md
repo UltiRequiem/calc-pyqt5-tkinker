@@ -29,8 +29,6 @@ pip install pyqt5
 
 * [Tkinker](https://docs.python.org/3/library/tkinter.html) 
 * [PyQT5](https://doc.qt.io/qtforpython)
-* [Py2Exe](https://www.py2exe.org/) 
-* [FBS](https://github.com/mherrmann/fbs)
 
 ## Licencia 📄
 
