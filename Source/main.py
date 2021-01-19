@@ -233,3 +233,6 @@ elif what_calc == 'pyqt5':
         sys.exit(pycalc.exec_())
 
     main()
+
+else:
+    print('Esa no es una opcion valida')
