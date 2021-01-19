@@ -1,6 +1,6 @@
 # Calculadora con Interfaz Grafica hecha con Python
 
-_El proyecto es poder modularizar la calculadora,es decir que levante una interfaz grafica minima y que te de a elegir si es que vas a usar Tkinker o PyQt5._
+_El proyecto es poder modularizar la calculadora, es decir que levante una interfaz grafica minima y que te dé a elegir si es que vas a usar Tkinker o PyQt5._
 
 ## Comenzando 🚀
 

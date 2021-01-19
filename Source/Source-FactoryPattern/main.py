@@ -1,22 +1,27 @@
-from functools import partial
-import sys
-from tkinker_calc import tkinkerCalculator
-from pyqt5_calc import PyCalcCtrl
+from tkinker_calc import TkinkerCalculator
+from pyqt5_calc import main
 
 
-class Calculator():
-    def __init__(self, calc_type):
-        if('tk' in calc_type):
-            self.calc_type = 'tkinker'
-            self.calc = tkinkerCalculator()
-        elif ('qt' in calc_type):
-            self.calc_type = 'pyqt5'
-            self.calc = PyCalcCtrl()
+class Calculator:
+    def __init__(self):
+        calc_type = input('¿Que calculadora vas a usar?: ')
+        print(calc_type)
+
+        if calc_type == 'tkinker':
+            TkinkerCalculator()
+
+        elif calc_type == 'pyqt5':
+            main()
+
+        else:
+            print('Esa no es una opción valida')
 
 
-main = Calculator('tkinker')
+Calculator()
 
-if(main.calc_type):
-    main.calc()
-else:
-    print('Esa no es una opcion valida')
+# main = Calculator('tkinker')
+#
+# if main.calc_type:
+#     main.calc()
+# else:
+#     print('Esa no es una opción valida')

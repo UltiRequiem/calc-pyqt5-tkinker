@@ -11,11 +11,13 @@ import sys
 
 ERROR_MSG = 'ERROR'
 
+
 class PyCalcCtrl:
     def __init__(self, model, view):
         self._evaluate = model
         self._view = view
         self._connectSignals()
+
 
     def _calculateResult(self):
         result = self._evaluate(expression=self._view.displayText())
@@ -37,6 +39,8 @@ class PyCalcCtrl:
         self._view.buttons['='].clicked.connect(self._calculateResult)
         self._view.display.returnPressed.connect(self._calculateResult)
         self._view.buttons['C'].clicked.connect(self._view.clearDisplay)
+
+
 
 class PyCalcUi(QMainWindow):
 
@@ -61,26 +65,26 @@ class PyCalcUi(QMainWindow):
         self.buttons = {}
         buttonsLayout = QGridLayout()
         buttons = {'7': (0, 0),
-                    '8': (0, 1),
-                    '9': (0, 2),
-                    '/': (0, 3),
-                    'C': (0, 4),
-                    '4': (1, 0),
-                    '5': (1, 1),
-                    '6': (1, 2),
-                    '*': (1, 3),
-                    '(': (1, 4),
-                    '1': (2, 0),
-                    '2': (2, 1),
-                    '3': (2, 2),
-                    '-': (2, 3),
-                    ')': (2, 4),
-                    '0': (3, 0),
-                    '00': (3, 1),
-                    '.': (3, 2),
-                    '+': (3, 3),
-                    '=': (3, 4),
-                    }
+                   '8': (0, 1),
+                   '9': (0, 2),
+                   '/': (0, 3),
+                   'C': (0, 4),
+                   '4': (1, 0),
+                   '5': (1, 1),
+                   '6': (1, 2),
+                   '*': (1, 3),
+                   '(': (1, 4),
+                   '1': (2, 0),
+                   '2': (2, 1),
+                   '3': (2, 2),
+                   '-': (2, 3),
+                   ')': (2, 4),
+                   '0': (3, 0),
+                   '00': (3, 1),
+                   '.': (3, 2),
+                   '+': (3, 3),
+                   '=': (3, 4),
+                   }
         for btnText, pos in buttons.items():
             self.buttons[btnText] = QPushButton(btnText)
             self.buttons[btnText].setFixedSize(40, 40)
@@ -98,6 +102,7 @@ class PyCalcUi(QMainWindow):
         self._createDisplay()
         self._createButtons()
 
+
 def evaluate_expression(expression):
     try:
         result = str(eval(expression, {}, {}))
@@ -105,6 +110,7 @@ def evaluate_expression(expression):
         result = ERROR_MSG
 
     return result
+
 
 def main():
     pycalc = QApplication(sys.argv)
@@ -114,4 +120,5 @@ def main():
     PyCalcCtrl(model=model, view=view)
     sys.exit(pycalc.exec_())
 
-main()
+
+

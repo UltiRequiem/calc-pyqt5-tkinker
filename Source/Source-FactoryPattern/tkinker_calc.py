@@ -1,8 +1,10 @@
-from functools import partial
-import sys
 from tkinter import *
 
-class tkinkerCalculator:
+f_num = 0
+math = ''
+
+
+class TkinkerCalculator:
     def __init__(self):
 
         root = Tk()
@@ -11,18 +13,15 @@ class tkinkerCalculator:
         e = Entry(root, width=35, borderwidth=5)
         e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
-        f_num = 0
-        math = ''
-
-        def button_click(self, number):
+        def button_click(number):
             current = e.get()
             e.delete(0, END)
             e.insert(0, str(current) + str(number))
 
-        def button_clear(self):
+        def button_clear():
             e.delete(0, END)
 
-        def button_equal(self):
+        def button_equal():
             second_number = e.get()
             e.delete(0, END)
 
@@ -35,48 +34,48 @@ class tkinkerCalculator:
             elif math == "Divide":
                 e.insert(0, f_num / float(second_number))
 
-        def set_calc(self, value):
+        def set_calc(value):
             first_number = e.get()
             global math, f_num
             math = value
             f_num = float(first_number)
             e.delete(0, END)
 
-        def button_add(self):
-            set_calc(self, "Addition")
+        def button_add():
+            set_calc("Addition")
 
-        def button_divide(self):
-            set_calc(self, "Divide")
+        def button_divide():
+            set_calc("Divide")
 
-        def button_multiply(self):
-            set_calc(self, "Multiply")
+        def button_multiply():
+            set_calc("Multiply")
 
-        def button_subtract(self):
-            set_calc(self, "Subtract")
+        def button_subtract():
+            set_calc("Subtract")
 
-        def buttons_builder(self,text, x, y, cmd):
+        def buttons_builder(text, x, y, cmd):
             return Button(root, text=text, padx=x, pady=y, command=cmd)
 
         # Number Buttons
 
-        button_1 = buttons_builder(self, "1", 40, 20, lambda: button_click(self, 1))
-        button_2 = buttons_builder(self, "2", 40, 20, lambda: button_click(self, 2))
-        button_3 = buttons_builder(self, "3", 40, 20, lambda: button_click(self, 3))
-        button_4 = buttons_builder(self, "4", 40, 20, lambda: button_click(self, 4))
-        button_5 = buttons_builder(self, "5", 40, 20, lambda: button_click(self, 5))
-        button_6 = buttons_builder(self, "6", 40, 20, lambda: button_click(self, 6))
-        button_7 = buttons_builder(self, "7", 40, 20, lambda: button_click(self, 7))
-        button_8 = buttons_builder(self, "8", 40, 20, lambda: button_click(self, 8))
-        button_9 = buttons_builder(self, "9", 40, 20, lambda: button_click(self, 9))
-        button_0 = buttons_builder(self, "0", 40, 20, lambda: button_click(self, 0))
+        button_1 = buttons_builder("1", 40, 20, lambda: button_click(1))
+        button_2 = buttons_builder("2", 40, 20, lambda: button_click(2))
+        button_3 = buttons_builder("3", 40, 20, lambda: button_click(3))
+        button_4 = buttons_builder("4", 40, 20, lambda: button_click(4))
+        button_5 = buttons_builder("5", 40, 20, lambda: button_click(5))
+        button_6 = buttons_builder("6", 40, 20, lambda: button_click(6))
+        button_7 = buttons_builder("7", 40, 20, lambda: button_click(7))
+        button_8 = buttons_builder("8", 40, 20, lambda: button_click(8))
+        button_9 = buttons_builder("9", 40, 20, lambda: button_click(9))
+        button_0 = buttons_builder("0", 40, 20, lambda: button_click(0))
 
         # Signs Buttons
-        button_add = buttons_builder(self, "+", 40, 20, button_add)
-        button_equal = buttons_builder(self, "=", 91, 20, button_equal)
-        button_clear = buttons_builder(self, "Clear", 79, 20, button_clear)
-        button_subtract = buttons_builder(self, "-", 41, 20, button_subtract)
-        button_multiply = buttons_builder(self, "*", 40, 20, button_multiply)
-        button_divide = buttons_builder(self, "/", 41, 20, button_divide)
+        button_add = buttons_builder("+", 40, 20, button_add)
+        button_equal = buttons_builder("=", 91, 20, button_equal)
+        button_clear = buttons_builder("Clear", 79, 20, button_clear)
+        button_subtract = buttons_builder("-", 41, 20, button_subtract)
+        button_multiply = buttons_builder("*", 40, 20, button_multiply)
+        button_divide = buttons_builder("/", 41, 20, button_divide)
 
         # Put The buttons on the screen
 
@@ -104,3 +103,6 @@ class tkinkerCalculator:
         # Loop
 
         root.mainloop()
+
+
+
