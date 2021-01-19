@@ -58,10 +58,9 @@ def button_subtract():
     set_calc("Subtract")
 
 
-
- 
 def buttons_builder(text, x, y, cmd):
     return Button(root, text=text, padx=x, pady=y, command=cmd)
+
 
 # Number Buttons
 
@@ -83,7 +82,6 @@ button_clear = buttons_builder("Clear", 79, 20, button_clear)
 button_subtract = buttons_builder("-", 41, 20, button_subtract)
 button_multiply = buttons_builder("*", 40, 20, button_multiply)
 button_divide = buttons_builder("/", 41, 20, button_divide)
-
 
 # Put The buttons on the screen
 
