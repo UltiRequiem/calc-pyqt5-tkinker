@@ -6,7 +6,6 @@ _The project consists of modularizing the calculator, pick up a minimal graphica
 
 _These instructions allow you to get a copy of the running project on your local machine for development and testing purposes._
 
-
 ### Pre-requisites 📋
 
 _You need to have a 3.X version of Python_
@@ -16,26 +15,40 @@ _You need to have a 3.X version of Python_
 - Make a git clone or download it in zip
 - Get in the directory
 - Install from your terminal with pip Tkinker:
+
 ```bash
 pip install tkinker
 ```
+
 - Install from your terminal with pip PyQt5:
+
 ```bash
 pip install pyqt5
 ```
+
 - Start editing the main.py
+
+## Run the main:
+
+```bash
+python main.py
+```
+
+![](https://i.imgur.com/OSktqWN.png)
 
 ## Build it with 🛠️
 
-* [Tkinker](https://docs.python.org/3/library/tkinter.html) 
-* [PyQT5](https://doc.qt.io/qtforpython)
+- [Tkinker](https://docs.python.org/3/library/tkinter.html)
+- [PyQT5](https://doc.qt.io/qtforpython)
 
 ## License 📄
 
 This proyect is under MIT License - see [LICENSE](https://github.com/EliazBobadilla/Basic-calculator-with-graphical-interface/blob/main/LICENSE) fore more information.
 
 ### Tkinker Interface:
+
 ![Tkinker Calc Interface](https://i.imgur.com/0fuyZjZ.png)
 
 ### PyQt5 Interface:
+
 ![PyQt5 Calc Interface](https://i.imgur.com/8r1d4pk.png)

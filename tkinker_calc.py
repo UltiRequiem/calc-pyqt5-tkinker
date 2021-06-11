@@ -1,14 +1,14 @@
 from tkinter import *
 
 f_num = 0
-math = ''
+math = ""
 
 
 class TkinkerCalculator:
     def __init__(self):
 
         root = Tk()
-        root.title('Python Calculator')
+        root.title("Python Calculator")
 
         e = Entry(root, width=35, borderwidth=5)
         e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
@@ -103,6 +103,3 @@ class TkinkerCalculator:
         # Loop
 
         root.mainloop()
-
-
-

@@ -4,12 +4,12 @@ from pyqt5_calc import main
 
 class Calculator:
     def __init__(self):
-        calc_type = input('What calculator are you going to use?: ')
+        calc_type = input("What calculator are you going to use?: ")
 
-        if calc_type == 'tkinker':
+        if calc_type == "tkinker":
             TkinkerCalculator()
 
-        elif calc_type == 'pyqt5':
+        elif calc_type == "pyqt5":
             main()
 
         else:
