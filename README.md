@@ -1,10 +1,13 @@
 # Calculator with graphical interface
 
-_The project consists of modularizing the calculator, pick up a minimal graphical interface and let you choose whether you are going to use Tkinker or PyQt5.._
+_The project consists of modularizing the calculator, pick up a minimal
+graphical interface and let you choose whether you are going to use Tkinker or
+PyQt5.._
 
 ## Starting 🚀
 
-_These instructions allow you to get a copy of the running project on your local machine for development and testing purposes._
+_These instructions allow you to get a copy of the running project on your local
+machine for development and testing purposes._
 
 ### Pre-requisites 📋
 
@@ -43,7 +46,9 @@ python main.py
 
 ## License 📄
 
-This proyect is under MIT License - see [LICENSE](https://github.com/EliazBobadilla/Basic-calculator-with-graphical-interface/blob/main/LICENSE) fore more information.
+This proyect is under MIT License - see
+[LICENSE](https://github.com/EliazBobadilla/Basic-calculator-with-graphical-interface/blob/main/LICENSE)
+fore more information.
 
 ### Tkinker Interface:
 

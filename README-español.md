@@ -1,10 +1,13 @@
 # Calculadora con Interfaz Grafica hecha con Python
 
-_El proyecto es poder modularizar la calculadora, es decir que levante una interfaz grafica minima y que te dé a elegir si es que vas a usar Tkinker o PyQt5._
+_El proyecto es poder modularizar la calculadora, es decir que levante una
+interfaz grafica minima y que te dé a elegir si es que vas a usar Tkinker o
+PyQt5._
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+_Estas instrucciones te permitirán obtener una copia del proyecto en
+funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 ### Pre-requisitos 📋
 
@@ -35,7 +38,9 @@ pip install pyqt5
 
 ## Licencia 📄
 
-Este proyecto está bajo MIT License - mira el archivo [LICENSE.md](https://github.com/EliazBobadilla/Basic-calculator-with-graphical-interface/blob/main/LICENSE) para detalles
+Este proyecto está bajo MIT License - mira el archivo
+[LICENSE.md](https://github.com/EliazBobadilla/Basic-calculator-with-graphical-interface/blob/main/LICENSE)
+para detalles
 
 ### Interfaz con Tkinker:
 
